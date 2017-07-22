@@ -1,0 +1,24 @@
+{
+  "name": "clouddy-api",
+  "version": "0.1.0",
+  "description": "clouddy api rest",
+  "main": "index.js",
+  "scripts": {
+    "app": "node server",
+    "start": "nodemon -e ts --exec \"npm run app\"  "
+  },
+  "author": " <clouddy@mail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.1",
+    "mongoose": "^4.11.3",
+    "nodemailer": "^4.0.1",
+    "xoauth2": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
