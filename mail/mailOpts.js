@@ -1,10 +1,9 @@
-// setup email data with unicode symbols
 let mailOptions = {
     from: '"CTO. Miguel Zavala 👻" ', // sender address
-    to: 'gabriel.galan92@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello galan ?', // plain text body
-    html: '<b>Hello world ? asdasdasdasdasdasasdas </b>' // html body
+    to: 'miguelzavalac@gmail.com', // list of receivers
+    subject: 'Asunto', // Subject line
+    text: 'Hola Miguel', // plain text body
+    html: '<h1>Hola mundo</h1>' // html body
 }
 
 module.exports = mailOptions
