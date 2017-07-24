@@ -1,10 +1,10 @@
 // setup email data with unicode symbols
 let mailOptions = {
-    from: '"Fred Foo 👻" ', // sender address
-    to: 'info@clouddy.com.mx', // list of receivers
+    from: '"CTO. Miguel Zavala 👻" ', // sender address
+    to: 'gabriel.galan92@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
-    text: 'Hello world ?', // plain text body
-    html: '<b>Hello world ?</b>' // html body
+    text: 'Hello galan ?', // plain text body
+    html: '<b>Hello world ? asdasdasdasdasdasasdas </b>' // html body
 }
 
 module.exports = mailOptions
