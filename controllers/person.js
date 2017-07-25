@@ -2,19 +2,27 @@ const Person = require('../models/person.js')
 const mail = require('./mail')
 
 const Client = {
-  savePerson : function (req, res, next) {
+  savePerson : function (req, res) {
     let person = new Person()
     
     person.name = req.body.name
     person.email = req.body.email
     person.description = req.body.description
+    person.date = new Date()
+
+    let clientMail = new mail(person.name, person.email)
+    let ourMail = new mail(person.email, "team@clouddy.com.mx")
 
     person.save( (err, personStore) => {
+    
       console.log(personStore)
       if(err) res.status(500).send({ message : `Error save in database : ${err}` })
-      mail.sendMail()
-      res.status(200).send( { message : `Mensaje recibido id ${personStore._id}}`})
+
+      res.status(200).send( { message : `Message received ${personStore}}`})
+      clientMail.sendMail()
+      ourMail.sendMail()
     })
+
   }
 }
 

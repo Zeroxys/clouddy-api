@@ -8,7 +8,8 @@ const personSchema = new Schema({
   id : ObjectId,
   name : String,
   email : String,
-  description : String
+  description : String,
+  date : Date
 })
 
 module.exports =  mongoose.model('Person', personSchema)

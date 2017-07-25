@@ -1,11 +1,7 @@
 'use strict'
-const Promise = require('bluebird')
 const express = require('express')
-const bodyParser = require('body-parser')
 const expressValidator = require('express-validator')
-const SendMail = require('./controllers/mail.js')
-const SaveMsg = require('./controllers/person.js')
-
+const bodyParser = require('body-parser')
 const app = express()
 const api = require('./routes')
 
