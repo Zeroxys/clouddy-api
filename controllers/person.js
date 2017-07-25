@@ -23,7 +23,7 @@ const Client = {
       to: `team@clouddy.com.mx`,
       subject: `El cliente ${person.name}`,
       text: `Tienes un nuevo cliente`,
-      html: `<h1>El cliente ${person.name} escribio lo siguiente ${person.description} y necesita un presupuesto chido su correo es ${person.email}</h1>`
+      html: `<h1>El cliente ${person.name} </br> escribio lo siguiente : ${person.description} </br> y necesita un presupuesto chido su correo es ${person.email}</h1>`
     })
 
     person.save( (err, personStore) => {
