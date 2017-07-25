@@ -5,20 +5,17 @@ class mail {
   constructor (name, mail, mailOpts) {
     this.name = name
     this.mail = mail
-  }
-
-  mailOptions () {
-    return {
-      from: '"Team Clouddy👻" ', // sender address
-      to: `${this.mail}`, // list of receivers
-      subject: 'Asunto', // Subject line
-      text: `Hola ${this.name}`, // plain text body
-      html: `<h1>Hola ${this.name}</h1>` // html body
+    this.mailOptions = {
+      from : mailOpts.from,
+      to : mailOpts.to,
+      subject : mailOpts.subject,
+      text : mailOpts.text,
+      html : mailOpts.html
     }
   }
 
   sendMail () {
-    transporter.sendMail(this.mailOptions(), (err, info) => {
+    transporter.sendMail(this.mailOptions, (err, info) => {
       if (err) {
         return console.log(err.message)
       }
